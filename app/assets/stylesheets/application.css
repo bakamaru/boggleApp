@@ -13,3 +13,345 @@
  *= require_tree .
  *= require_self
  */
+
+ * {
+    font-family: 'Shojumaru', cursive;
+}
+
+#container {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #fff ;
+}
+#container section{
+  /* width: 100%; */
+}
+
+#head {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #CE0A4A;;
+  color: #FFF;
+  text-shadow: 1px 1px 2px #000;
+  font-size: 2.2rem;
+  margin: 0 0 20px 0;
+}
+
+#timer-cont,
+#points-cont {
+ font-size: 1.2rem;
+  color: #fff;
+}
+
+#points {
+  letter-spacing: 5px;
+  font-size: 1.5rem;
+  color: white;
+}
+.timer{
+  color:red
+}
+
+#body-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@keyframes shakeContainer {
+  0% { transform: translateX(0px); transform: rotate(0deg)}
+  25% {transform: translateX(80px); transform: rotate(45deg)}
+  50% { transform: translateX(0px); transform: rotate(90deg)}
+  75% {transform: translateX(-80px); transform: rotate(180deg)}
+  100% { transform: translateX(0px); transform: rotate(360deg)}
+}
+
+.shake-container {
+  animation: shakeContainer .1025s 10;
+}
+
+#gameboard-container {
+  width: 470px;
+  height: 470px;
+  background-color: #ce0a4a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 16px black;
+}
+.csize_6{
+  height: 520px !important;
+}
+.csize_7{
+  height: 600px !important;
+  width: 600px !important;
+}
+#inner-frame {
+  width: 430px;
+  height: 430px;
+  background-color: #FFF;
+  display: grid;
+  grid-template: repeat( 4, 1fr) / repeat( 4, 1fr);
+  justify-items: center;
+  align-items: center;
+}
+.size_5{
+  grid-template: repeat( 5, 1fr) / repeat( 5, 1fr) !important;
+}
+.size_6{
+  grid-template: repeat( 6, 1fr) / repeat( 6, 1fr) !important;
+  height: 480px !important;
+}
+.size_7{
+  grid-template: repeat( 7, 1fr) / repeat( 7, 1fr) !important;
+  height: 565px !important;
+  width: 565px !important;
+}
+.size_8{
+  grid-template: repeat( 8, 1fr) / repeat( 8, 1fr) !important;
+}
+.die-container {
+  width: 100%;
+  height: 100%;
+  justify-items: center;
+  background-color: #c8c8c8;
+  border: 2px solid #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.die {
+  width: 75%;
+  height: 75%;
+  background-color: #fff;
+  box-shadow: 0 0 5px black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Shojumaru', cursive;
+  font-size: 3.2rem;
+}
+
+.selected {
+  background-color: #299B00;
+  color: #FFF;
+}
+
+.btnSection {
+  display: flex;
+}
+
+.btn-cont {
+  margin: 20px;
+}
+
+.boggleBtn {
+  padding: 15px;
+  font-size: 2rem;
+  background-color: #fff;
+  box-shadow: 1px 1px 2px 1px black;
+}
+.boggleBtn:active {
+  box-shadow: inset 1px 1px 2px 1px black;
+}
+
+/* WORD LIST */
+#word-list-container {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 5px black;
+}
+#word-list-header {
+  font-size: 2rem;
+  text-decoration: underline;
+  margin-bottom: 10px;
+}
+#word-list {
+  width: 100%;
+  line-height: 230%;
+  font-family: 'Open Sans', sans-serif;
+  list-style-type: decimal;
+  padding-left: 40px;
+}
+#word-list > li {
+  font-size: 1.8rem;
+}
+.notaWord {
+  text-decoration: line-through;
+  color: #F73214;
+}
+.wordpoints {
+  font-size: 1.3rem;
+  color: #1BB33A;
+  font-weight: bold;
+}
+
+/* INSTRUCTIONS */
+#instructions-cont {
+  width: 100%;
+  padding: 10px 0 30px;
+  display: flex;
+  justify-content: center;
+}
+#instructions {
+  /* width: 85%; */
+  background-color: #fff;
+  font-family: Merriweather, serif;
+  font-size: 1.2rem;
+  padding: 20px;
+  border: 1px solid black;
+  border-radius: 10px;
+}
+.instr-text {
+  margin: 10px 0;
+  text-align: justify;
+  font-weight: bold;
+}
+h3.instr-text {
+  font-size: 1.5rem;
+  text-decoration: underline;
+}
+.instr-list {
+  margin: 0 0 0 40px;
+}
+#instructions ul > li {
+  list-style-type: circle;
+  line-height: 150%;
+}
+
+.menu{
+  text-align: center;
+
+padding: 100px;
+
+border: 1px solid #cecece;
+}
+.menu-item {
+  width: 25vw;
+  height: 50px;
+  margin: 10px 0 0 0;
+  font-size: 50px;
+  text-align: left;
+  color: black;
+  position: relative;
+}
+.menu-item:hover{
+  text-shadow: 2px 4px 0px rgba(20, 20, 200, 0.5);
+}
+.menu-item:hover:before{
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 5px;
+  height: 40px;
+  width: 50px;
+  background-color: red;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%, 10% 50%);
+  
+  animation-name: finger;
+  animation-duration: 0.35s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: linear;
+}
+@keyframes finger{
+  0% {left: -55px;}
+  100% {left: -75px;}
+}
+
+.bg{
+  grid-column: 2 / span 2;
+  grid-row-start: 2;
+  align-self: center;
+  background-image: linear-gradient(to right, rgba(255, 153, 0, 0), rgba(255, 153, 0, 1));
+  justify-self: stretch;
+  align-self: stretch;
+}
+.gameHeading{
+  margin: 100px;
+text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 500px !important;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+#center {
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+#score {
+  transform-style: preserve-3d;
+  font-size:90px;
+  line-height: 90px;
+}
+#tag {
+  transform-style: preserve-3d;
+  display: none;
+  position:absolute;
+  top: -55px;
+  left:50%;
+  transform: translateX(-50%);
+  font-size:50px;
+  line-height: 50px;
+}
+#title{  
+  font-size:70px;
+  line-height: 70px;
+}
+.name{
+  font-size:50px;
+  line-height: 70px;
+}
+  .retrybutton{
+    margin-top:30px;
+  }
