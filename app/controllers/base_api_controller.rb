@@ -23,14 +23,7 @@ class BaseApiController < ActionController::Base
               :msg=>"unauthorized request"
               }
               render json:data
-          end
-        rescue ActiveRecord::RecordNotFound => e
-          data = {
-            :code => 401,
-            :data => nil,
-            :msg=>"unauthorized request"
-            }
-            render json:data
+          end        
         rescue JWT::DecodeError => e
           data = {
             :code => 401,
