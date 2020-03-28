@@ -1,0 +1,2 @@
+call rails s
+pause
