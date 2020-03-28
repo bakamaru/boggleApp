@@ -20,7 +20,7 @@ class GameBoard extends React.Component {
         8: 11,
     }
     boardSize = 4;
-    timerMinutes = 1;
+    timerMinutes = 3;
     timerSeconds = 0;
     constructor(props) {
         super(props);

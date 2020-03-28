@@ -14,13 +14,19 @@ class ResultView extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            points: 0,
+            userName: "",
         }
     }
     componentDidMount() {
         let userName = this.props.match.params.slug;
         if (userName != undefined) {
-            result=this.props.scoreStatus.status;
+            this.result=this.props.scoreStatus.status;
+            this.setState({
+                points:  this.result.points,
+                userName:  this.result,userName
+            })
+            //console.log(this.result)
             let userNameWithSpace = userName.replace(/-/g, ' ');
             if (this.props.scoreStatus.status.userName != userNameWithSpace) {
                 this.goToHomePage();
@@ -42,14 +48,14 @@ class ResultView extends React.Component {
             <div className="results">
                 <div className="text-center">
                     <div id="name">
-                        {this.result.userName}
+                        {this.state.userName}
                     </div>
                     <div id="title">
                         SCORE:
                         </div>
 
                     <div id="score">
-                        {this.result.points}
+                        {this.state.points}
                     </div>
                     <div >
                         <button onClick={this.goToHomePage} className="btn btn-info retrybutton">Retry</button>
