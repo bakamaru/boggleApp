@@ -1,4 +1,4 @@
-require 'HTTParty'
+require 'httparty'
 class BoggleController < BaseApiController
   before_action :authorize_request
 

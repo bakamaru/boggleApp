@@ -208,7 +208,17 @@ class GameBoard extends React.Component {
 
     addToWordList = (arrOfLetters) => {
         const { wordList, word } = this.state;
+
         let wordtoList = arrOfLetters.join('').toLowerCase();
+
+        if (wordList.indexOf(wordtoList) === -1) {
+            console.log("element doesn't exist");
+        }
+        else {
+            console.log("element found");
+            alert('already added');
+            return;
+        }
         this.checkWordApi(wordtoList).then((response) => {
             if (response) {
                 let newWord = `<li class="word">${wordtoList.toLowerCase()} <span class="wordpoints"></span></li>`
