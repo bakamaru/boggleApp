@@ -1,24 +1,56 @@
-# README
+# A Simple Boggle Game App
+This is a [Ruby on Rails](https://rubyonrails.org/) and [React.js](https://reactjs.org/) based implementation of the **Boggle** game.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Built with
 
-Things you may want to cover:
+- Ruby 2.6.5p114
 
-* Ruby version
+- Rails 6.0.2
 
-* System dependencies
+## Quick Start
 
-* Configuration
+You need to have bundler installed in your system.
 
-* Database creation
+**Step 1:** You can install it by typing:
 
-* Database initialization
+```bash
+$ bundle install
+```
 
-* How to run the test suite
+**Step 2:** Install the necessary node packages:
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+$ yarn install 
+```
+**Step 3:** Precompile assests(js,css,pack..):
 
-* Deployment instructions
+```bash
+$ rails assets:precompile 
+```
 
-* ...
+**Step 4:** Run the server:
+
+```bash
+$ rails s 
+```
+
+
+## Running the tests
+
+#### Testing the Rails APIs
+
+You can test the Rails API by executing the following code in a terminal window, at the root of the (**/boggle-rails-react**) project:
+
+```bash
+$ rails test or rake
+```
+
+#### Testing JavaScript
+
+```bash
+$ npm test
+```
+
+
+## Author
+- **Binod Tamang** 
